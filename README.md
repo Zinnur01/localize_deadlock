@@ -19,16 +19,16 @@
 ```txt
 localizationPath=D:\Steam\steamapps\common\Deadlock\game\citadel\resource\localization
 folders=citadel_attributes citadel_heroes citadel_mods
-fromKey=russian
-toKey=english
+fromLanguage=russian
+toLanguage=english
 ```
 
 ## Описание параметров в `config.txt`:
 
 - `localizationPath` — путь к папке с локализацией игры **Deadlock**. Этот параметр необходимо настроить в соответствии с вашим местоположением игры на компьютере. Убедитесь, что путь указан правильно.
 - `folders` — список папок, в которых нужно будет производить изменения. Каждую папку необходимо указать через пробел (например: **citadel_attributes citadel_heroes citadel_mods**).
-- `fromKey` — исходный язык, из которого нужно сделать изменения (например, **russian**).
-- `toKey` — целевой язык, на который нужно изменить файлы (например, **english**).
+- `fromLanguage` — исходный язык, из которого нужно сделать изменения (например, **russian**).
+- `toLanguage` — целевой язык, на который нужно изменить файлы (например, **english**).
 
 ## Как использовать
 
@@ -36,7 +36,7 @@ toKey=english
 
 2. **Запустите** ``localize_deadlock.bat``: Дважды щелкните по файлу ``localize_deadlock.bat`` или запустите его из командной строки. Скрипт прочитает параметры из конфигурационного файла и начнёт процесс переименования файлов в указанных папках.
 
-3. **Результат**: Если файл с исходной локализацией существует, он будет переименован в файл с целевой локализацией. Например, если ``fromKey`` — это ``russian``, а ``toKey`` — это ``english``, то файл с локализацией для русского языка будет переименован в файл с локализацией для английского.
+3. **Результат**: Если файл с исходной локализацией существует, он будет переименован в файл с целевой локализацией. Например, если ``fromLanguage`` — это ``russian``, а ``toLanguage`` — это ``english``, то файл с локализацией для русского языка будет переименован в файл с локализацией для английского.
 
 В случае, если файл для переименования не найден, будет выведено сообщение, что изменения не потребовались.
 
@@ -47,8 +47,8 @@ toKey=english
 ```txt
 localizationPath=D:\Steam\steamapps\common\Deadlock\game\citadel\resource\localization
 folders=citadel_attributes citadel_heroes citadel_mods
-fromKey=russian
-toKey=english
+fromLanguage=russian
+toLanguage=english
 ```
 
 ### Пример вывода после выполнения `localize_deadlock.bat`:

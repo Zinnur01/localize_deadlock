@@ -9,15 +9,15 @@ set "configFile=config.txt"
 for /f "tokens=1,2 delims==" %%A in (%configFile%) do (
     if "%%A"=="localizationPath" set "localizationPath=%%B"
     if "%%A"=="folders" set "folders=%%B"
-    if "%%A"=="fromKey" set "fromKey=%%B"
-    if "%%A"=="toKey" set "toKey=%%B"
+    if "%%A"=="fromLanguage" set "fromLanguage=%%B"
+    if "%%A"=="toLanguage" set "toLanguage=%%B"
 )
 set "extension=.txt"
 
 ::Renaming files
 for %%F in (!folders!) do (
-    set "fromPath=!localizationPath!\%%F\%%F_!fromKey!%extension%"
-    set "toPath=!localizationPath!\%%F\%%F_!toKey!%extension%"
+    set "fromPath=!localizationPath!\%%F\%%F_!fromLanguage!%extension%"
+    set "toPath=!localizationPath!\%%F\%%F_!toLanguage!%extension%"
 
     if exist !fromPath! (
         move /y !fromPath! !toPath!
