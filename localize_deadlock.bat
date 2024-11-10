@@ -20,7 +20,7 @@ for %%F in (!folders!) do (
     set "toPath=!localizationPath!\%%F\%%F_!toLanguage!%extension%"
 
     if exist !fromPath! (
-        move /y !fromPath! !toPath!
+        move /y !fromPath! !toPath! >nul 2>&1
         echo Успешно изменено: %%F
     ) else (
         echo Изменения не потребовались: %%F
