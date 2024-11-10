@@ -1,0 +1,4 @@
+localizationPath=D:\Steam\steamapps\common\Deadlock\game\citadel\resource\localization
+folders=citadel_attributes citadel_heroes citadel_mods
+fromKey=russian
+toKey=english
