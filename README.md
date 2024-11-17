@@ -4,7 +4,7 @@
 
 Перейдите по ссылке и скачайте `localize_deadlock.rar`
 
-- [1.0.0](https://github.com/Zinnur01/localize_deadlock/releases/tag/1.0.0)
+- [1.0.1](https://github.com/Zinnur01/localize_deadlock/releases/tag/1.0.1)
 
 ## Описание
 
