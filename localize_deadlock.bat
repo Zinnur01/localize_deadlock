@@ -7,11 +7,12 @@ set "configFile=config.txt"
 
 ::Reading values from a file
 for /f "tokens=1,2 delims==" %%A in (%configFile%) do (
-    if "%%A"=="localizationPath" set "localizationPath=%%B"
+    if "%%A"=="localizationPath" set "localizationPath=%%~B"
     if "%%A"=="folders" set "folders=%%B"
     if "%%A"=="fromLanguage" set "fromLanguage=%%B"
     if "%%A"=="toLanguage" set "toLanguage=%%B"
 )
+
 set "extension=.txt"
 
 ::Renaming files
@@ -19,8 +20,8 @@ for %%F in (!folders!) do (
     set "fromPath=!localizationPath!\%%F\%%F_!fromLanguage!%extension%"
     set "toPath=!localizationPath!\%%F\%%F_!toLanguage!%extension%"
 
-    if exist !fromPath! (
-        move /y !fromPath! !toPath! >nul 2>&1
+    if exist "!fromPath!" (
+        move /y "!fromPath!" "!toPath!" >nul 2>&1
         echo Успешно изменено: %%F
     ) else (
         echo Изменения не потребовались: %%F
